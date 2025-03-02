@@ -30,6 +30,12 @@
         background-color: var(--c-background-color);
       }
 
+      /* Task 11: Set max width of page to 800px */
+      body {
+        max-width: 800px; /* ADDED: Max width */
+        margin: 0 auto; /* ADDED: Center alignment */
+      }
+
       /* Task 2: Set background color of header and footer */
       header {
         background-color: var(--c-background-highlights);
@@ -45,37 +51,56 @@
 
       /* Task 4: Links in article should be magenta */
       article a {
-        color: var(--c-magenta); 
+        color: var(--c-magenta);
       }
 
       /* Task 5: Links should be orange on hover */
       article a:hover {
-        color: var(--c-orange); 
+        color: var(--c-orange);
       }
 
       /* Task 7: Center header, text size 150%, yellow color */
       header {
-        text-align: center; 
+        text-align: center;
       }
       header h1 {
-        font-size: 150%; 
-        color: var(--c-yellow); 
+        font-size: 150%;
+        color: var(--c-yellow);
       }
 
       /* Task 8: Remove bullet points from nav list */
       nav ul {
-        list-style-type: none; 
+        list-style-type: none;
       }
 
       /* Task 9: Center align, flex layout for nav items */
       nav ul {
-        display: flex; 
-        justify-content: center; 
-        width: 100%; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
       nav li {
-        margin-right: 10px; 
-        margin-left: 10px; 
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      /* Task 10: Color text in aside to green, links red/blue */
+      aside {
+        color: var(--c-green); /* ADDED: Aside text color */
+      }
+      aside a {
+        color: var(--c-red); /* ADDED: Aside link color */
+      }
+      aside a:hover {
+        color: var(--c-blue); /* ADDED: Aside link hover color */
+      }
+
+      /* Task 12: Article headings need top padding */
+      article h2 {
+        padding-top: 50px; /* ADDED: Article h2 padding */
+      }
+      article h3 {
+        padding-top: 50px; /* ADDED: Article h3 padding */
       }
     </style>
   </head>
