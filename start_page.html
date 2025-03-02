@@ -32,8 +32,8 @@
 
       /* Task 11: Set max width of page to 800px */
       body {
-        max-width: 800px; /* ADDED: Max width */
-        margin: 0 auto; /* ADDED: Center alignment */
+        max-width: 800px;
+        margin: 0 auto;
       }
 
       /* Task 2: Set background color of header and footer */
@@ -57,6 +57,22 @@
       /* Task 5: Links should be orange on hover */
       article a:hover {
         color: var(--c-orange);
+      }
+
+      /* Task 6: Create border around each subsection */
+      article .subsection {
+        border: 3px solid var(--c-cyan);
+        margin-bottom: 20px;
+      }
+      
+      article .subsection h3 {
+        margin-top: 0;
+        padding: 10px;
+      }
+      
+      article .subsection p {
+        padding: 10px;
+        margin: 0;
       }
 
       /* Task 7: Center header, text size 150%, yellow color */
@@ -86,27 +102,40 @@
 
       /* Task 10: Color text in aside to green, links red/blue */
       aside {
-        color: var(--c-green); 
+        color: var(--c-green);
       }
       aside a {
-        color: var(--c-red); 
+        color: var(--c-red);
       }
       aside a:hover {
-        color: var(--c-blue); /
+        color: var(--c-blue);
       }
 
       /* Task 12: Article headings need top padding */
       article h2 {
-        padding-top: 50px; 
+        padding-top: 50px;
       }
       article h3 {
-        padding-top: 50px; 
+        padding-top: 50px;
+      }
+
+      /* Task 13: Set layout for main content area */
+      main {
+        display: flex; 
+      }
+      article {
+        width: 70%; 
+      }
+      aside {
+        width: 30%; 
+        margin-left: 15px; 
       }
     </style>
   </head>
 
   <body>
     <!-- Here is our main header that is used across all the pages of our website -->
+
     <header>
       <h1>Header</h1>
     </header>
@@ -120,6 +149,7 @@
       </ul>
 
        <!-- A Search form is another common non-linear way to navigate through a website. -->
+
        <form>
          <input type="search" name="q" placeholder="Search query">
          <input type="submit" value="Go!">
@@ -128,23 +158,31 @@
 
     <!-- Here is our page's main content -->
     <main>
+
       <!-- It contains an article -->
       <article>
         <h2>Article heading</h2>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. <a href="#">This is a link</a> for more information.</p>
 
-        <h3>Subsection</h3>
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. <a href="#">Another link</a>.</p>
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <!-- MODIFIED: Wrapped subsections in div elements with class="subsection" -->
+        <div class="subsection">
+          <h3>Subsection</h3>
+          <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. <a href="#">Another link</a>.</p>
+          <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        </div>
 
-        <h3>Another subsection</h3>
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi. <a href="#">Click here</a> for more details.</p>
+        <div class="subsection">
+          <h3>Another subsection</h3>
+          <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+          <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi. <a href="#">Click here</a> for more details.</p>
+        </div>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
       <aside>
         <h2>Related</h2>
+
         <ul>
           <li><a href="#">Oh I do like to be beside the seaside</a></li>
           <li><a href="#">Oh I do like to be beside the sea</a></li>
@@ -153,11 +191,14 @@
           <li><a href="#">Oh well...</a></li>
         </ul>
       </aside>
+
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
+
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
+
   </body>
 </html>
